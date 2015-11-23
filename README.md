@@ -1,5 +1,5 @@
 # PortOfLZMA
-#### Port of LZMA SDK for iOS / Android and c / c++.
+#### Port of LZMA SDK for iOS / Android.
 
 
 LZMA is the default and general compression method of 7z format in the 7-Zip program. LZMA provides a high compression ratio and very fast decompression, so it is very suitable for embedded applications. For example, it can be used for ROM (firmware) compressing.
