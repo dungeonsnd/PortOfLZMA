@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-v4-WwN">
-                                <rect key="frame" x="236" y="285" width="87" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-v4-WwN">
+                                <rect key="frame" x="285" y="282" width="30" height="36"/>
                                 <animations/>
-                                <state key="normal" title="Compress"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <connections>
                                     <action selector="btnCompress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oSm-5d-a3J"/>
                                 </connections>
@@ -33,6 +33,9 @@
                             <constraint firstItem="d0h-v4-WwN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="odW-2V-xAn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="compressBtn" destination="d0h-v4-WwN" id="KOf-IM-cer"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
