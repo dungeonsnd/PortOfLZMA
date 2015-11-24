@@ -13,6 +13,15 @@
 		B6E6311B1C04427D00937430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E631191C04427D00937430 /* Main.storyboard */; };
 		B6E6311D1C04427D00937430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E6311C1C04427D00937430 /* Assets.xcassets */; };
 		B6E631201C04427D00937430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E6311E1C04427D00937430 /* LaunchScreen.storyboard */; };
+		B6E6313A1C0452E700937430 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B6E631331C0452E700937430 /* README.md */; };
+		B6E6313D1C04533A00937430 /* LzmaCompress.mm in Sources */ = {isa = PBXBuildFile; fileRef = B6E6313C1C04533A00937430 /* LzmaCompress.mm */; };
+		B6E631401C045A4300937430 /* compress_test.log in Resources */ = {isa = PBXBuildFile; fileRef = B6E6313F1C045A4300937430 /* compress_test.log */; };
+		B6E631491C0461E200937430 /* liblzma_util.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E631421C0461E200937430 /* liblzma_util.a */; };
+		B6E6314A1C0461E200937430 /* liblzma_util.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E631431C0461E200937430 /* liblzma_util.a.arm64 */; };
+		B6E6314B1C0461E200937430 /* liblzma_util.a.armv7 in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E631441C0461E200937430 /* liblzma_util.a.armv7 */; };
+		B6E6314C1C0461E200937430 /* liblzma_util.a.armv7s in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E631451C0461E200937430 /* liblzma_util.a.armv7s */; };
+		B6E6314D1C0461E200937430 /* liblzma_util.a.i386 in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E631461C0461E200937430 /* liblzma_util.a.i386 */; };
+		B6E6314E1C0461E200937430 /* liblzma_util.a.x86_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E631471C0461E200937430 /* liblzma_util.a.x86_64 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,17 @@
 		B6E6311C1C04427D00937430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6E6311F1C04427D00937430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6E631211C04427D00937430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E631331C0452E700937430 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B6E6313B1C04533A00937430 /* LzmaCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LzmaCompress.h; sourceTree = "<group>"; };
+		B6E6313C1C04533A00937430 /* LzmaCompress.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LzmaCompress.mm; sourceTree = "<group>"; };
+		B6E6313F1C045A4300937430 /* compress_test.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = compress_test.log; sourceTree = "<group>"; };
+		B6E631421C0461E200937430 /* liblzma_util.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma_util.a; sourceTree = "<group>"; };
+		B6E631431C0461E200937430 /* liblzma_util.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma_util.a.arm64; sourceTree = "<group>"; };
+		B6E631441C0461E200937430 /* liblzma_util.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma_util.a.armv7; sourceTree = "<group>"; };
+		B6E631451C0461E200937430 /* liblzma_util.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma_util.a.armv7s; sourceTree = "<group>"; };
+		B6E631461C0461E200937430 /* liblzma_util.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma_util.a.i386; sourceTree = "<group>"; };
+		B6E631471C0461E200937430 /* liblzma_util.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma_util.a.x86_64; sourceTree = "<group>"; };
+		B6E6314F1C04622200937430 /* lzma_util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lzma_util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E6314B1C0461E200937430 /* liblzma_util.a.armv7 in Frameworks */,
+				B6E631491C0461E200937430 /* liblzma_util.a in Frameworks */,
+				B6E6314C1C0461E200937430 /* liblzma_util.a.armv7s in Frameworks */,
+				B6E6314E1C0461E200937430 /* liblzma_util.a.x86_64 in Frameworks */,
+				B6E6314D1C0461E200937430 /* liblzma_util.a.i386 in Frameworks */,
+				B6E6314A1C0461E200937430 /* liblzma_util.a.arm64 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +84,10 @@
 		B6E6310F1C04427D00937430 /* ios_test */ = {
 			isa = PBXGroup;
 			children = (
+				B6E631411C0461E200937430 /* libs */,
+				B6E6314F1C04622200937430 /* lzma_util.h */,
+				B6E6313E1C045A4300937430 /* test_data */,
+				B6E6312A1C0452E700937430 /* ios_lib */,
 				B6E631131C04427D00937430 /* AppDelegate.h */,
 				B6E631141C04427D00937430 /* AppDelegate.m */,
 				B6E631161C04427D00937430 /* ViewController.h */,
@@ -77,6 +107,37 @@
 				B6E631111C04427D00937430 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6E6312A1C0452E700937430 /* ios_lib */ = {
+			isa = PBXGroup;
+			children = (
+				B6E631331C0452E700937430 /* README.md */,
+				B6E6313B1C04533A00937430 /* LzmaCompress.h */,
+				B6E6313C1C04533A00937430 /* LzmaCompress.mm */,
+			);
+			path = ios_lib;
+			sourceTree = "<group>";
+		};
+		B6E6313E1C045A4300937430 /* test_data */ = {
+			isa = PBXGroup;
+			children = (
+				B6E6313F1C045A4300937430 /* compress_test.log */,
+			);
+			path = test_data;
+			sourceTree = "<group>";
+		};
+		B6E631411C0461E200937430 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				B6E631421C0461E200937430 /* liblzma_util.a */,
+				B6E631431C0461E200937430 /* liblzma_util.a.arm64 */,
+				B6E631441C0461E200937430 /* liblzma_util.a.armv7 */,
+				B6E631451C0461E200937430 /* liblzma_util.a.armv7s */,
+				B6E631461C0461E200937430 /* liblzma_util.a.i386 */,
+				B6E631471C0461E200937430 /* liblzma_util.a.x86_64 */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +171,7 @@
 				TargetAttributes = {
 					B6E6310C1C04427D00937430 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7P35529BL3;
 					};
 				};
 			};
@@ -136,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E631401C045A4300937430 /* compress_test.log in Resources */,
 				B6E631201C04427D00937430 /* LaunchScreen.storyboard in Resources */,
 				B6E6311D1C04427D00937430 /* Assets.xcassets in Resources */,
 				B6E6311B1C04427D00937430 /* Main.storyboard in Resources */,
@@ -151,6 +214,8 @@
 			files = (
 				B6E631181C04427D00937430 /* ViewController.m in Sources */,
 				B6E631151C04427D00937430 /* AppDelegate.m in Sources */,
+				B6E6313A1C0452E700937430 /* README.md in Sources */,
+				B6E6313D1C04533A00937430 /* LzmaCompress.mm in Sources */,
 				B6E631121C04427D00937430 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,9 +326,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ios_test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios_test/ios_lib/libs",
+					"$(PROJECT_DIR)/ios_test/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtzijin.ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -273,9 +344,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ios_test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios_test/ios_lib/libs",
+					"$(PROJECT_DIR)/ios_test/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtzijin.ios-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

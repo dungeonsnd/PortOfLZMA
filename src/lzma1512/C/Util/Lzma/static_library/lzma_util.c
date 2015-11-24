@@ -1,6 +1,10 @@
 /* LzmaUtil.c -- Test application for LZMA compression
 2015-11-08 : Igor Pavlov : Public domain */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "../../../Precomp.h"
 
 #include <stdio.h>
@@ -295,4 +299,8 @@ int Decompress(const char * inputFile, const char * outputFile, char errMsg[800]
     return main2(4, argvs, errMsg);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 

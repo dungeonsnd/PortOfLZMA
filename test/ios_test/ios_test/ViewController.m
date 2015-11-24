@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "LzmaCompress.h"
 
 @interface ViewController ()
+
+- (IBAction)btnCompress:(UIButton *)sender;
 
 @end
 
@@ -22,6 +25,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnCompress:(UIButton *)sender {
+    
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"compress_test.log" ofType:nil];
+    NSString *tmpDir = NSTemporaryDirectory();
+    NSString *outFile =[NSString stringWithFormat:@"%@/compress_test.log.7z", tmpDir];
+    [LzmaCompress compress:file outputFile:outFile];
 }
 
 @end
