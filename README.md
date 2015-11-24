@@ -37,9 +37,11 @@ Add the LzmaCompressIOS folder to your project, and enable BITCODE.
 ##TODO
 1 Android surpport
 
-2 Cocopods surpport
+2 Stream compress/decompress surpport.       For now,  PortOfLZMA only surpport file compress/decompress.
 
-3 Windows surpport
+3 Cocopods surpport
+
+4 Windows surpport
 
 
 ##Author
