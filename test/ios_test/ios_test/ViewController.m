@@ -37,15 +37,38 @@
     NSString *outFile2 =[NSString stringWithFormat:@"%@/compress_test.log.7z", tmpDir];
     
     
-    static BOOL bCompress =NO;
-    if (bCompress) {
-        [LzmaCompress compress:outFile outputFile:outFile2];
-        [self.compressBtn setTitle:@"Decompress" forState:UIControlStateNormal];
-        bCompress =NO;
+    static BOOL toCompress =NO;
+    
+    if (toCompress) {
+        [LzmaCompress compress:outFile
+                    outputFile:outFile2
+                   blockSucess:^(){
+                       NSLog(@"---- Compress sucess");
+                       [self.compressBtn setTitle:@"Decompress" forState:UIControlStateNormal];
+                   }
+                  blockFailure:^(){
+                      NSLog(@"#### Compress failed");
+                      [self.compressBtn setTitle:@"Compress failed." forState:UIControlStateNormal];
+                  }
+         ];
+        
+        [self.compressBtn setTitle:@"Compressing ... " forState:UIControlStateNormal];
+        toCompress =NO;
     } else {
-        [LzmaCompress decompress:inFile outputFile:outFile];
-        [self.compressBtn setTitle:@"Compress" forState:UIControlStateNormal];
-        bCompress =YES;
+        [LzmaCompress decompress:inFile
+                      outputFile:outFile
+                     blockSucess:^(){
+                         NSLog(@"---- Decompress sucess");
+                         [self.compressBtn setTitle:@"Compress" forState:UIControlStateNormal];
+                     }
+                    blockFailure:^(){
+                        NSLog(@"#### Decompress failed");
+                        [self.compressBtn setTitle:@"Decompress failed." forState:UIControlStateNormal];
+                    }
+         ];
+        
+        [self.compressBtn setTitle:@"Decompressing ... " forState:UIControlStateNormal];
+        toCompress =YES;
     }
     
 }

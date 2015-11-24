@@ -41,7 +41,11 @@ Add the LzmaCompressIOS folder to your project, and enable BITCODE.
 
 3 Cocopods surpport
 
-4 Windows surpport
+4 Optimize memory usage
+ 
+5 LZMA2 support
+ 
+ 6  Windows surpport
 
 
 ##Author
@@ -59,20 +63,25 @@ LZMA is under his own license (Please refer to http://www.7-zip.org/sdk.html ) .
 
 
 ##Notes
-The follow is a compression example, 
+The follow is a compression example,  '.lzma' is our compression result.
+40MB, compress cost 15seconds, 200MB memory. decompress cost 2secons, 20MB memory.
 ```
 compress_test $ du -sk *
 40964   compress_test.log
 1092    compress_test.log.7z
 2428    compress_test.log.gz
-**1172  compress_test.log.lzma**
+
+> 1172  compress_test.log.lzma
+
 1096    compress_test.log.xz
 
 compress_test $ du -sh *
  40M    compress_test.log
 1.1M    compress_test.log.7z
 2.4M    compress_test.log.gz
-**1.1M  compress_test.log.lzma**
+
+> 1.1M  compress_test.log.lzma
+
 1.1M    compress_test.log.xz
 ```
 
