@@ -1,0 +1,47 @@
+
+LIB =
+LIB2 =
+CFLAGS_ALL = -c -O2 -Wall -D_7ZIP_ST $(CFLAGS)
+RM = rm -f
+
+OBJS = \
+  lzma_util.o \
+  Alloc.o \
+  LzFind.o \
+  LzmaDec.o \
+  LzmaEnc.o \
+  7zFile.o \
+  7zStream.o \
+
+
+all: $(LIBS)
+
+$(LIBS): $(OBJS)
+#	$(CC) -o $(LIBS) $(LDFLAGS) $(OBJS) $(LIB) $(LIB2)
+	ar crv $(LIBS) $(OBJS)
+	mv $(LIBS) $(DEST)
+	rm -f $(OBJS)
+
+Alloc.o: ../../../Alloc.c
+	$(CC) $(CFLAGS_ALL) ../../../Alloc.c
+
+LzFind.o: ../../../LzFind.c
+	$(CC) $(CFLAGS_ALL) ../../../LzFind.c
+
+LzmaDec.o: ../../../LzmaDec.c
+	$(CC) $(CFLAGS_ALL) ../../../LzmaDec.c
+
+LzmaEnc.o: ../../../LzmaEnc.c
+	$(CC) $(CFLAGS_ALL) ../../../LzmaEnc.c
+
+7zFile.o: ../../../7zFile.c
+	$(CC) $(CFLAGS_ALL) ../../../7zFile.c
+
+7zStream.o: ../../../7zStream.c
+	$(CC) $(CFLAGS_ALL) ../../../7zStream.c
+
+lzma_util.o: lzma_util.c
+	$(CC) $(CFLAGS_ALL) lzma_util.c
+	
+clean:
+	-$(RM) $(OBJS)

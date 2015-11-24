@@ -164,32 +164,6 @@ static SRes Encode(ISeqOutStream *outStream, ISeqInStream *inStream, UInt64 file
 }
 
 
-////
-////  Add by Jeffery , 2015-11-23
-////
-int Compress(const char * inputFile, const char * outputFile, char errMsg[800])
-{
-    char *argvs[4];
-    argvs[0] = NULL;
-    argvs[1] = "e";
-    argvs[2] = inputFile;        
-    argvs[3] = outputFile;
-    return main2(4, argvs, errMsg);
-}
-
-////
-////  Add by Jeffery , 2015-11-23
-////
-int Decompress(const char * inputFile, const char * outputFile, char errMsg[800])
-{
-    char *argvs[4];
-    argvs[0] = NULL;
-    argvs[1] = "d";
-    argvs[2] = inputFile;        
-    argvs[3] = outputFile;
-    return main2(4, argvs, errMsg);
-}
-
 int main2(int numArgs, const char *args[], char *rs)
 {
   CFileSeqInStream inStream;
@@ -293,3 +267,32 @@ int main2(int numArgs, const char *args[], char *rs)
 //   fputs(rs, stdout);
 //   return res;
 // }
+
+
+////
+////  Add by Jeffery , 2015-11-23
+////
+int Compress(const char * inputFile, const char * outputFile, char errMsg[800])
+{
+    char *argvs[4];
+    argvs[0] = NULL;
+    argvs[1] = "e";
+    argvs[2] = inputFile;        
+    argvs[3] = outputFile;
+    return main2(4, argvs, errMsg);
+}
+
+////
+////  Add by Jeffery , 2015-11-23
+////
+int Decompress(const char * inputFile, const char * outputFile, char errMsg[800])
+{
+    char *argvs[4];
+    argvs[0] = NULL;
+    argvs[1] = "d";
+    argvs[2] = inputFile;        
+    argvs[3] = outputFile;
+    return main2(4, argvs, errMsg);
+}
+
+
