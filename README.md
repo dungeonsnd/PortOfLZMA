@@ -29,8 +29,8 @@ Add the LzmaCompressIOS folder to your project, and enable BITCODE.
     NSString *outFile =[NSString stringWithFormat:@"%@/compress_test.log", tmpDir];
     NSString *outFile2 =[NSString stringWithFormat:@"%@/compress_test.log.7z", tmpDir];
     
-    [LzmaCompress decompress:inFile outputFile:outFile];
-    [LzmaCompress compress:outFile outputFile:outFile2];
+[LzmaCompress decompress:inFile outputFile:outFile];
+[LzmaCompress compress:outFile outputFile:outFile2];
 ```
 
 
@@ -47,6 +47,9 @@ Add the LzmaCompressIOS folder to your project, and enable BITCODE.
 ##Author
 jeffery
 dungeonsnd at gmail dot com
+
+github addr:
+https://github.com/dungeonsnd/PortOfLZMA
 
 
 ##License
