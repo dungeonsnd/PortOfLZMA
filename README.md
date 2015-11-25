@@ -23,14 +23,23 @@ I have tested using the files in LzmaCompressUnixC.
 Add the LzmaCompressIOS folder to your project, and enable BITCODE.
 
 ```
+[LzmaCompress compress:outFile
+            outputFile:outFile2
+           blockSucess:^(){
+               [self.compressBtn setTitle:@"Decompress" forState:UIControlStateNormal];
+           }
+          blockFailure:^(){
+              [self.compressBtn setTitle:@"Compress failed." forState:UIControlStateNormal];
+          }
 
-    NSString *inFile = [[NSBundle mainBundle] pathForResource:@"compress_test.log.7z" ofType:nil];
-    NSString *tmpDir = NSTemporaryDirectory();
-    NSString *outFile =[NSString stringWithFormat:@"%@/compress_test.log", tmpDir];
-    NSString *outFile2 =[NSString stringWithFormat:@"%@/compress_test.log.7z", tmpDir];
-    
-[LzmaCompress decompress:inFile outputFile:outFile];
-[LzmaCompress compress:outFile outputFile:outFile2];
+[LzmaCompress decompress:inFile
+            outputFile:outFile
+            blockSucess:^(){
+                [self.compressBtn setTitle:@"Compress" forState:UIControlStateNormal];
+            }
+            blockFailure:^(){
+                [self.compressBtn setTitle:@"Decompress failed." forState:UIControlStateNormal];
+            }
 ```
 
 
@@ -45,11 +54,13 @@ Add the LzmaCompressIOS folder to your project, and enable BITCODE.
  
 5 LZMA2 support
  
- 6  Windows surpport
+6 MS-Windows surpport
 
 
 ##Author
 jeffery
+
+email:
 dungeonsnd at gmail dot com
 
 github addr:
@@ -64,7 +75,7 @@ LZMA is under his own license (Please refer to http://www.7-zip.org/sdk.html ) .
 
 ##Notes
 The follow is a compression example,  '.lzma' is our compression result.
-40MB, compress cost 15seconds, 200MB memory. decompress cost 2secons, 20MB memory.
+40MB, compress cost 15seconds, 190MB memory. decompress cost 2secons, 20MB memory.
 ```
 compress_test $ du -sk *
 40964   compress_test.log
