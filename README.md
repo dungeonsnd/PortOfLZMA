@@ -26,19 +26,19 @@ Add the LzmaCompressIOS folder to your project, and enable BITCODE.
 [LzmaCompress compress:outFile
             outputFile:outFile2
            blockSucess:^(){
-               [self.compressBtn setTitle:@"Decompress" forState:UIControlStateNormal];
+               NSLog(@"---- Compress sucess");
            }
           blockFailure:^(){
-              [self.compressBtn setTitle:@"Compress failed." forState:UIControlStateNormal];
+              NSLog(@"#### Compress failed");
           }
 
 [LzmaCompress decompress:inFile
             outputFile:outFile
             blockSucess:^(){
-                [self.compressBtn setTitle:@"Compress" forState:UIControlStateNormal];
+                 NSLog(@"---- Decompress sucess");
             }
             blockFailure:^(){
-                [self.compressBtn setTitle:@"Decompress failed." forState:UIControlStateNormal];
+                NSLog(@"#### Decompress failed");
             }
 ```
 
