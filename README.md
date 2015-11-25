@@ -11,7 +11,7 @@ LZMA is the default and general compression method of 7z format in the 7-Zip pro
 This project is the port of lzma for iOS , Android and Linux , Windows  platforms.
 
 For iOS:
-I have already tested on my iphone5s and the simulator 6SP.
+I have already tested on my iphone5s and the simulator 6SP. The iOS version i have developed only for one day, so if you use it in your production project, please tested more.
 
 The compressed file can be decompress on Win7 by the 7-Zip program( download from http://www.7-zip.org/a/7z1512.exe ).
 
