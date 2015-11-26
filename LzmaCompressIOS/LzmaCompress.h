@@ -11,8 +11,14 @@
 @interface LzmaCompress : NSObject
 
 
-+ (NSInteger)compress:(NSString *)inputFile outputFile:(NSString *)outputFile;
++ (NSInteger)compress:(NSString *)inputFile
+           outputFile:(NSString *)outputFile
+            blockSucess:(void(^)(void))cbSucess
+            blockFailure:(void(^)(void))cbFailure;
 
-+ (NSInteger)decompress:(NSString *)inputFile outputFile:(NSString *)outputFile;
++ (NSInteger)decompress:(NSString *)inputFile
+             outputFile:(NSString *)outputFile
+              blockSucess:(void(^)(void))cbSucess
+              blockFailure:(void(^)(void))cbFailure;
 
 @end
